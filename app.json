@@ -1,0 +1,56 @@
+{
+  "name": "Pʏʀᴏɢʀᴀᴍ Sᴛʀɪɴɢ Sᴇssɪᴏɴ Gᴇɴᴇʀᴀᴛᴏʀ",
+  "description": "Tᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴘʏʀᴏɢʀᴀᴍ sᴛʀɪɴɢ sᴇssɪᴏɴ",
+  "logo": "https://telegra.ph/file/7ec22c82f580a334dd13e.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+  "repository": "https://github.com/anunicn47/StringSessionBot",
+  "env": {
+    "ENVIRONMENT": {
+      "description": "ᴅᴏɴ'ᴛ ᴄʜᴀɴɢᴇ ᴀɴʏᴛʜɪɴɢ.",
+      "required": true,
+      "value": "ANYTHING"
+    },
+    "API_ID": {
+      "description": "Gᴇᴛ ᴛʜɪs ᴠᴀʟᴜᴇ ғʀᴏᴍ ᴍʏ.ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Oʙᴛᴀɪɴ ᴀ Tᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴛᴏᴋᴇɴ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ @BᴏᴛFᴀᴛʜᴇʀ",
+      "required": true,
+      "value": ""
+    },
+    "MUST_JOIN": {
+      "description": "Aᴅᴅ ᴜsᴇʀɴᴀᴍᴇ/ɪᴅ ᴏғ ᴀ ᴄʜᴀɴɴᴇʟ/ɢʀᴏᴜᴘ",
+      "required": false,
+      "value": ""
+    }
+  }
+}
