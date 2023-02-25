@@ -13,7 +13,7 @@ class Data:
 
     buttons = [
         generate_single_button,
-        [InlineKeyboardButton("✨ ᴅᴇᴠᴇʟᴏᴘᴇʀ  ✨", url="https://t.me/an_unic_or_n47")],
+        [InlineKeyboardButton("✨ ᴅᴇᴠᴇʟᴏᴘᴇʀ  ✨", url="https://t.me/anu_pi")],
         [
             InlineKeyboardButton(" ❔ ʜᴇʟᴘ ❔", callback_data="help"),
             InlineKeyboardButton("🎪 ᴀʙᴏᴜᴛ 🎪", callback_data="about")
@@ -29,7 +29,7 @@ Tʜɪs ɪs {}
 A sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
 ғᴏʀ ɢᴇɴᴇʀᴀᴛɪɴɢ ᴛʜᴇ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴs
 
-ᴏᴡᴏ ʙʏ : [Λnanya](https://t.me/an_unic_or_n47)
+ᴏᴡᴏ ʙʏ : [Λnanya](https://t.me/anu_pi)
     """
 
     HELP = """
@@ -53,5 +53,5 @@ A sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇ�
   
   Lᴀɴɢᴜᴀɢᴇ : [Pʏᴛʜᴏɴ](https://www.python.org)
   
-  Dᴇᴠᴇʟᴏᴘᴇʀ : [Λnanya](https://t.me/an_unic_or_n47)
+  Dᴇᴠᴇʟᴏᴘᴇʀ : [Λnanya](https://t.me/anu_pi)
       """
