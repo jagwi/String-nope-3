@@ -1,7 +1,7 @@
 <p align="center">Pyrogram and Telethon String Session Bot
 
 
-<p align="center"><a href="https://www.github.com/anunicn47/StringSessionBot"><img src="https://telegra.ph/file/7ec22c82f580a334dd13e.jpg" width="2000"></a></p>
+<p align="center"><a href="https://www.github.com/anunicn47/StringSessionBot"><img src="https://te.legra.ph/file/75416cae7e6e80b38c219.jpg" width="2000"></a></p>
 
 Telegram bot to generate pyrogram and telethon string session.
 
