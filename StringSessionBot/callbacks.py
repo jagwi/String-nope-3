@@ -69,6 +69,6 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
 
 
 ERROR_MESSAGE = "Oᴏᴘs! Aɴ ᴇxᴄᴇᴘᴛɪᴏɴ ᴏᴄᴄᴜʀʀᴇᴅ! \n\n**Eʀʀᴏʀ** : {} " \
-            "\n\nPʟᴇᴀsᴇ ᴠɪsɪᴛ [ANU](https://t.me/anu_pui) ɪғ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴅᴏᴇsɴ'ᴛ ᴄᴏɴᴛᴀɪɴ ᴀɴʏ " \
+            "\n\nPʟᴇᴀsᴇ ᴠɪsɪᴛ [ANU](https://t.me/puii_support) ɪғ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴅᴏᴇsɴ'ᴛ ᴄᴏɴᴛᴀɪɴ ᴀɴʏ " \
                         "sᴇɴsɪᴛɪᴠᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀɴᴅ ʏᴏᴜ ɪғ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴘᴏʀᴛ ᴛʜɪs ᴀs " \
                         "ᴛʜɪs ᴇʀʀᴏʀ ᴍᴇssᴀɢᴇ ɪs ɴᴏᴛ ʙᴇɪɴɢ ʟᴏɢɢᴇᴅ ʙʏ ᴜs!"
