@@ -35,7 +35,7 @@ from telethon.errors import (
 ask_ques = "Pʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴘʏᴛʜᴏɴ ʟɪʙʀᴀʀʏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ғᴏʀ"
 buttons_ques = [
     [
-        InlineKeyboardButton("Pʏʀᴏɢʀᴀᴍ", callback_data="pyrogram"),
+        InlineKeyboardButton("Pʏʀᴏɢʀᴀᴍ", callback_data="pyrogram1"),
         InlineKeyboardButton("Tᴇʟᴇᴛʜᴏɴ", callback_data="telethon"),
     ],
     [
