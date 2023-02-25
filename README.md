@@ -1,6 +1,5 @@
-# Pyrogram and Telethon String Session Bot [@StarkStringGenBot](https://t.me/StarkStringGenBot)
+<p align="center">Pyrogram and Telethon String Session Bot
 
-> A star ⭐ from you means a lot to us!
 
 <p align="center"><a href="https://www.github.com/anunicn47/StringSessionBot"><img src="https://telegra.ph/file/7ec22c82f580a334dd13e.jpg" width="2000"></a></p>
 
