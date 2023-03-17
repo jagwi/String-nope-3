@@ -160,7 +160,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = f"**ᴛʜɪs ɪs ʏᴏᴜʀ {ty.upper()} sᴛʀɪɴɢ sᴇssɪᴏɴ ** \n\n`{string_session}` \n\nɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ: @string_anubot"
+    text = f"**ᴛʜɪs ɪs ʏᴏᴜʀ {ty.upper()} sᴛʀɪɴɢ sᴇssɪᴏɴ ** \n\n`{string_session}` \n\nɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ: @string_puiibot"
     try:
         if not is_bot:
             await client.send_message("me", text)
@@ -169,7 +169,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
     except KeyError:
         pass
     await client.disconnect()
-    await bot.send_message(msg.chat.id, "Sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ {} sᴛʀɪɴɢ sᴇssɪᴏɴ. \n\nPʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs! \n\nBʏ @an_unic_or_n47".format("telethon" if telethon else "pyrogram"))
+    await bot.send_message(msg.chat.id, "Sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ {} sᴛʀɪɴɢ sᴇssɪᴏɴ. \n\nPʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs! \n\nBʏ @anu_pi".format("telethon" if telethon else "pyrogram"))
 
 
 async def cancelled(msg):
