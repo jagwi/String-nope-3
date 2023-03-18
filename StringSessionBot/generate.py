@@ -13,6 +13,7 @@ from pyrogram.errors import (
     SessionPasswordNeeded,
     PasswordHashInvalid
 )
+
 from telethon.errors import (
     ApiIdInvalidError,
     PhoneNumberInvalidError,
@@ -26,11 +27,8 @@ from telethon.errors import (
 ask_ques = "Pʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴘʏᴛʜᴏɴ ʟɪʙʀᴀʀʏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ғᴏʀ"
 buttons_ques = [
     [
-        InlineKeyboardButton("Pʏʀᴏɢʀᴀᴍ", callback_data="pyrogram1"),
+        InlineKeyboardButton("Pʏʀᴏɢʀᴀᴍ", callback_data="pyrogram"),
         InlineKeyboardButton("Tᴇʟᴇᴛʜᴏɴ", callback_data="telethon"),
-    ],
-    [
-        InlineKeyboardButton("Pʏʀᴏɢʀᴀᴍ ᴠ2", callback_data="pyrogram"),
     ],
     [
         InlineKeyboardButton("Pʏʀᴏɢʀᴀᴍ Bᴏᴛ", callback_data="pyrogram_bot"),
@@ -44,13 +42,12 @@ async def main(_, msg):
     await msg.reply(ask_ques, reply_markup=InlineKeyboardMarkup(buttons_ques))
 
 
-async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: bool = False, is_bot: bool = False):
+async def generate_session(bot: Client, msg: Message, telethon=False, 
+is_bot: bool = False):
     if telethon:
         ty = "Tᴇʟᴇᴛʜᴏɴ"
     else:
-        ty = "Pʏʀᴏɢʀᴀᴍ"
-        if not old_pyro:
-            ty += " v2"
+        ty = "Pyrogram v2"
     if is_bot:
         ty += " Bot"
     await msg.reply(f"Sᴛᴀʀᴛɪɴɢ {ty} Sᴇssɪᴏɴ Gᴇɴᴇʀᴀᴛɪᴏɴ...")
@@ -84,11 +81,9 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
     elif telethon:
         client = TelegramClient(StringSession(), api_id, api_hash)
     elif is_bot:
-        client = Client(name="bot", api_id=api_id, api_hash=api_hash, bot_token=phone_number, in_memory=True)
-    elif old_pyro:
-        client = Client1(":memory:", api_id=api_id, api_hash=api_hash)
+        client = Client(name=f"bot_{user_id}", api_id=api_id, api_hash=api_hash, bot_token=phone_number, in_memory=True)
     else:
-        client = Client(name="user", api_id=api_id, api_hash=api_hash, in_memory=True)
+        client = Client(name=f"user_{user_id}", api_id=api_id, api_hash=api_hash, in_memory=True)
     await client.connect()
     try:
         code = None
@@ -97,10 +92,10 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
                 code = await client.send_code_request(phone_number)
             else:
                 code = await client.send_code(phone_number)
-    except (ApiIdInvalid, ApiIdInvalidError, ApiIdInvalid1):
+    except (ApiIdInvalid, ApiIdInvalidError):
         await msg.reply('`API_ID` ᴀɴᴅ `API_HASH` ᴄᴏᴍʙɪɴᴀᴛɪᴏɴ ɪs ɪɴᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.', reply_markup=InlineKeyboardMarkup(Data.generate_button))
         return
-    except (PhoneNumberInvalid, PhoneNumberInvalidError, PhoneNumberInvalid1):
+    except (PhoneNumberInvalid, PhoneNumberInvalidError):
         await msg.reply('`PHONE_NUMBER` ɪs ɪɴᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.', reply_markup=InlineKeyboardMarkup(Data.generate_button))
         return
     try:
@@ -119,13 +114,13 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
                 await client.sign_in(phone_number, phone_code, password=None)
             else:
                 await client.sign_in(phone_number, code.phone_code_hash, phone_code)
-        except (PhoneCodeInvalid, PhoneCodeInvalidError, PhoneCodeInvalid1):
+        except (PhoneCodeInvalid, PhoneCodeInvalidError):
             await msg.reply('OTP ɪs ɪɴᴠᴀʟɪᴅ. Pʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.', reply_markup=InlineKeyboardMarkup(Data.generate_button))
             return
-        except (PhoneCodeExpired, PhoneCodeExpiredError, PhoneCodeExpired1):
+        except (PhoneCodeExpired, PhoneCodeExpiredError):
             await msg.reply('OTP ɪs ᴇxᴘɪʀᴇᴅ. Pʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.', reply_markup=InlineKeyboardMarkup(Data.generate_button))
             return
-        except (SessionPasswordNeeded, SessionPasswordNeededError, SessionPasswordNeeded1):
+        except (SessionPasswordNeeded, SessionPasswordNeededError):
             try:
                 two_step_msg = await bot.ask(user_id, 'Yᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ ʜᴀs ᴇɴᴀʙʟᴇᴅ ᴛᴡᴏ-sᴛᴇᴘ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ. Pʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ᴘᴀssᴡᴏʀᴅ.', filters=filters.text, timeout=300)
             except TimeoutError:
@@ -139,7 +134,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
                     await client.check_password(password=password)
                 if await cancelled(api_id_msg):
                     return
-            except (PasswordHashInvalid, PasswordHashInvalidError, PasswordHashInvalid1):
+            except (PasswordHashInvalid, PasswordHashInvalidError):
                 await two_step_msg.reply('Iɴᴠᴀʟɪᴅ Pᴀssᴡᴏʀᴅ Pʀᴏᴠɪᴅᴇᴅ. Pʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.', quote=True, reply_markup=InlineKeyboardMarkup(Data.generate_button))
                 return
     else:
