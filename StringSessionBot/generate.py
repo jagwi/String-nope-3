@@ -1,6 +1,5 @@
-from data import Data
-from pyrogram.types import Message
 from telethon import TelegramClient
+from pyrogram.types import Message
 from pyrogram import Client, filters
 from pyrogram import Client as Client1
 from asyncio.exceptions import TimeoutError
@@ -13,14 +12,6 @@ from pyrogram.errors import (
     PhoneCodeExpired,
     SessionPasswordNeeded,
     PasswordHashInvalid
-)
-from pyrogram.errors import (
-    ApiIdInvalid as ApiIdInvalid1,
-    PhoneNumberInvalid as PhoneNumberInvalid1,
-    PhoneCodeInvalid as PhoneCodeInvalid1,
-    PhoneCodeExpired as PhoneCodeExpired1,
-    SessionPasswordNeeded as SessionPasswordNeeded1,
-    PasswordHashInvalid as PasswordHashInvalid1
 )
 from telethon.errors import (
     ApiIdInvalidError,
