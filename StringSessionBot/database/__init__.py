@@ -11,5 +11,4 @@ def start() -> scoped_session:
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
 
 BASE = declarative_base()
-BASE = declarative_base()
 SESSION = start()
