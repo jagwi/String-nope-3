@@ -50,10 +50,12 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             if query == "pyrogram":
                 await callback_query.answer("Pʟᴇᴀsᴇ ɴᴏᴛᴇ ᴛʜᴀᴛ ᴛʜᴇ ɴᴇᴡ ᴛʏᴘᴇ ᴏғ sᴛʀɪɴɢ sᴇssɪᴏɴs ᴍᴀʏ ɴᴏᴛ ᴡᴏʀᴋ ɪɴ ᴀʟʟ ʙᴏᴛs, ɪ.ᴇ, ᴏɴʟʏ ᴛʜᴇ ʙᴏᴛs ᴛʜᴀᴛ ʜᴀᴠᴇ ʙᴇᴇɴ ᴜᴘᴅᴀᴛᴇᴅ ᴛᴏ ᴘʏʀᴏɢʀᴀᴍ ᴠ2 ᴡɪʟʟ ᴡᴏʀᴋ!", show_alert=True)
                 await generate_session(bot, callback_query.message)
-            
+            """
+            # Maybe in future it'll come back.
             elif query == "pyrogram_bot":
                 await callback_query.answer("Pʟᴇᴀsᴇ ɴᴏᴛᴇ ᴛʜᴀᴛ ᴛʜɪs ʙᴏᴛ sᴇssɪᴏɴ ᴡɪʟʟ ʙᴇ ᴏғ ᴘʏʀᴏɢʀᴀᴍ ᴠ2", show_alert=True)
                 await generate_session(bot, callback_query.message, is_bot=True)
+                                                                              """
             elif query == "telethon_bot":
                 await callback_query.answer()
                 await generate_session(bot, callback_query.message, telethon=True, is_bot=True)
