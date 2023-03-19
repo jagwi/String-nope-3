@@ -1,9 +1,9 @@
-<p align="center">Pyrogram and Telethon String Session Bot
+<p align="center">
+   
 
 
 <p align="center"><a href="https://www.github.com/anunicn47/StringSessionBot"><img src="https://graph.org/file/ff8305e937ef8e29e1ab1.jpg" width="1000"></a></p>
 
-Telegram bot to generate pyrogram and telethon string session.
 
 ### Script to get your telegram Session in telethon and pyrogram.
 
