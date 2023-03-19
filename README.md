@@ -2,7 +2,7 @@
    
 
 
-<p align="center"><a href="https://www.github.com/anunicn47/StringSessionBot"><img src="https://graph.org/file/ff8305e937ef8e29e1ab1.jpg" width="1000"></a></p>
+<p align="center"><a href="https://www.github.com/anunicn47/StringSessionBot"><img src="https://graph.org/file/ff8305e937ef8e29e1ab1.jpg" width="500"></a></p>
 
 
 ### Script to get your telegram Session in telethon and pyrogram.
