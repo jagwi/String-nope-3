@@ -7,7 +7,7 @@ Telegram bot to generate pyrogram and telethon string session.
 
 ### Script to get your telegram Session in telethon and pyrogram.
 
-<a href="https://replit.com/@anunicn47/GenerateStringSession?v=1"><img src="https://graph.org/file/f45cf901be8648213590f.jpg" alt="generate_string" /></a>
+<a href="https://replit.com/@anunicn47/GenerateStringSession?v=1"><img src="https://graph.org/file/f45cf901be8648213590f.jpg" width="100"> </a>
 
 
 
